@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png">
+    <meta name="msapplication-TileColor" content="#42B0D0">
+    <meta name="theme-color" content="#42B0D0">
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <meta property="og:title" content="__OG_TITLE__"/>
+    <meta property="og:image" content="__OG_IMAGE__"/>
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="HIP It"/>
+    <meta property="og:url" content="https://www.hip-it.com/"/>
+    <meta property="og:description" content="__OG_DESCRIPTION__"/>
+    <meta property="og:type" content="website" />
+
+    <meta property="title" content="__OG_TITLE__"/>
+    <meta property="image" content="__OG_IMAGE__"/>
+    <meta property="description" content="__OG_DESCRIPTION__"/>
+    
+    <!--<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async defer></script>
+    <!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400" rel="stylesheet">-->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyD0GEUfKVkZU7vjrHi2Xy8OZDJLFKSb9uQ&libraries=places"></script>
+        <!--<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">-->
+    <script src="%PUBLIC_URL%/banner-effect/TweenLite.min.js"></script>
+    <script src="%PUBLIC_URL%/banner-effect/EasePack.min.js"></script>
+    <script src="%PUBLIC_URL%/banner-effect/animatedHeader.js"></script>
+    <title>HIP it</title>
+    <style>
+        .page-loader p {
+            width: 60px;
+            height: 60px;
+            z-index: 1;
+            margin: 40vh auto 0;
+            border-radius: 100%;
+            border: 5px solid;
+            border-top-color: #c4161c;
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+            border-left-color: #c4161c;
+            border-right-color: rgba(255, 255, 255, 0.1);
+            -webkit-animation: page-loading 1s ease-in-out infinite;
+            animation: page-loading 1s ease-in-out infinite;
+        }
+
+        .page-loader {
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 99999;
+            text-align: center;
+        }
+
+        .page-loader h3 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #222;
+        }
+
+        .content-nav ul li.active img {
+            opacity: 1;
+        }
+        
+        .page-loader img {
+            margin-top: 35vh;
+        }
+    </style>
+    <script>
+        function pageloaded(){
+			$(".page-loader").fadeOut("slow").remove();
+        }
+    </script>
+</head>
+
+<body>
+    <!--<div class="page-loader">
+		<img src="/moodslogo-01.svg" alt="" width="250">
+		<h3>plug into life...</h3>
+	</div>-->
+
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+
+</body>
+
+</html>

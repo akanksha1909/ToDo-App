@@ -1,0 +1,194 @@
+.main-screen{
+	display: table;
+	margin-top: 43px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+body,html{
+	width: 100%;
+    height: 100%;	
+}
+
+.pads-chat-bg {
+	background: #fff;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 50px;
+	padding-bottom: 5px;
+	
+}
+.sidebar-todo{
+    background: #fff;
+    border-radius: 3px;
+    height:550px;
+    margin-top: 20px;
+}
+.sidebar-action-todo{
+    padding-top: 20px;
+}
+.react-calendar {
+    border:none !important;
+    width: 287px !important;
+    margin-top: -50px !important;
+    padding-left: 17px !important;
+}
+.sidebar-calender{
+    padding-top: 35px;
+}
+.sidebar-todo input {
+    margin-bottom: 27px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 83%;
+    position: relative;
+}
+.sidebar-todo .fa-search{
+    position: absolute;
+    top: 28px;
+    left: 230px;
+
+}
+
+
+.sidebar-add-button{
+    margin-top: 250px;
+}
+.background-img2 {
+    background: url('../../Login/images/todo1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 650px;
+    width: 115%;
+    height: 100%;
+    margin-left: -86px;
+    background-position: center;
+}
+.main-screen .background-img2 {
+	display: table;
+  }
+
+.todolist{
+    padding-left: 600px;
+    padding-top: 10px;
+}
+.calender-title{
+	padding-left: 100px;
+	padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: -40px;
+}
+.todolist-date{
+    padding-left: 700px;
+    padding-top: 0px;  
+}
+.todolist-date span{
+	font-size: 20px;
+	color: #42b0d0;
+	padding: 0px 20px;
+}
+.add-icon img{
+	margin-right: 150px;
+    height: 35px;
+    cursor: pointer;
+}
+.add-icon{
+	margin-top: 0px;
+	position: absolute;
+	padding-top: 20px;
+    top: 50px;
+    right: 30px;
+}
+.modal-title {
+	text-align: center;
+	color: black !important;
+}
+.reminder-modal-title{
+	font-size: 25px;
+}
+.textbox-group{
+	margin-bottom:10px;
+}
+.reminder-modal-title img{
+	height:22px;
+	margin:0px 5px;
+}
+.reminder-modal-body{
+	padding: 0px 25px;
+}
+.reminder-modal-body  textarea{
+	border-radius: 0px;
+    background-size: 13px;
+    box-shadow: 0px 1px 3px 0px #ccc;
+    border: none;
+}
+.reminder-modal-body  input,.reminder-modal-body  select{
+	border-radius: 0px;
+    height: 40px;
+    background-size: 13px;
+    box-shadow: 0px 1px 3px 0px #ccc;
+    border: none;
+}
+.reminder-modal-body  label{
+	font-weight: 500;
+    font-size: 15px;
+    padding-top: 11px;
+}
+.reminder-modal-footer{
+	border: none;
+	text-align:center;
+}
+
+.reminder-modal-title img{
+	height:22px;
+	margin:0px 5px;
+}
+.pac-container{
+	z-index: 100000 !important;
+}
+
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+	
+ 
+
