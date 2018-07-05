@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Modal from 'react-bootstrap/lib/Modal';
+import { Input } from 'antd';
+
 import Calendar from 'react-calendar';
 import { Switch } from 'antd';
 import {browserHistory, Link} from 'react-router'
@@ -18,7 +20,8 @@ import AddReminderComponent from './AddTodoList'
 
 //Action Creator
 import {getReminders,changetaskstatus} from '../../redux/actions/todo'
-import './css/style.css'
+const Search = Input.Search;
+
 
 
 
@@ -61,7 +64,7 @@ class ToDolist extends Component {
             }
         })    
         this.setState({reminders : todo,taskcompleted :count,todotask : todo,meetingtask:meeting,remindertask : reminder,eventtask : event });
-	}
+    }
 
     componentDidMount = () =>{
         const {dispatch} = this.props;
@@ -181,51 +184,60 @@ class ToDolist extends Component {
         })
     
         return (
-            <div className="container">
-                <div className="row background-img2">
+            <div className="container background-img2">
+                <div className="container-fluid">
+                <div className="row container-header-row">
                     <div className="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div className="sidebar-todo">
-                            <div className="col-lg-12">
-                                <input type="text" className = "form-control" placeholder="Search.."/>
-                                <i className="fa fa-search" aria-hidden="true"></i>
-
+                            <div>
+                                <Search placeholder="Search Tasks" style={{ width: "100%" }}/>
 
                             </div>
-
                             <div className = "sidebar-action-todo">
 
-                                <div className="col-xs-12 col-lg-12">
-                                    <div className="col-xs-2 col-sm-1 col-md-2 col-lg-2">
-                                    <i className="material-icons">list</i>
+                                <div className="col-sm-12 col-md-12 col-xs-12 col-lg-12" style={{"white-space":"nowrap"}}>
+                                    <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding">
+                                        <div className="text-center">
+                                            <i className="material-icons">list</i>
+                                        </div>
+                                
                                     </div>
-                                    <div className="col-xs-10 col-sm-11 col-md-10 col-lg-10">
-                                        <a onClick = {() => this.gettaskslist('todo')}><p>Important Tasks </p></a>
+                                    <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                                        <div>
+                                            <a onClick = {() => this.gettaskslist('todo')}><p>Important Tasks </p></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div className="col-xs-2 col-sm-1 col-md-2 col-lg-2">
-                                    <i className="material-icons">alarm</i>
+                                    <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <div className="text-center">
+                                            <i className="material-icons">alarm</i>
+                                        </div>
                                     </div>
-                                    <div className="col-xs-10 col-sm-11 col-md-10 col-lg-10">
+                                    <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                                         <a onClick = {() => this.gettaskslist('reminder')}><p>Reminder </p></a>
                                     </div>
 
                                 </div>
                                 <div className="col-xs-12 col-lg-12">
-                                    <div className="col-xs-2 col-sm-1 col-md-2 col-lg-2">
-                                    <i className="fa fa-users no-padding" aria-hidden="true"></i>
+                                    <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <div className="text-center">
+                                            <i className="fa fa-users no-padding" aria-hidden="true"></i>
+                                        </div>
                                     </div>
-                                    <div className="col-xs-10 col-sm-11 col-md-10 col-lg-10">
+                                    <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                                         <a onClick = {() => this.gettaskslist('meeting')}><p>Meeting </p></a>
                                     </div>
 
                                 </div>
                                 <div className="col-xs-12 col-lg-12">
                             
-                                    <div className="col-xs-2 col-sm-1 col-md-2 col-lg-2">
-                                    <i className="material-icons">event</i>
+                                    <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <div className="text-center">
+                                            <i className="material-icons">event</i>
+                                        </div>
                                     </div>
-                                    <div className="col-xs-10 col-sm-11 col-md-10 col-lg-10">
+                                    <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                                     <a onClick = {() => this.gettaskslist('event')}><p>Event </p></a>
 
                                      </div>
@@ -234,10 +246,10 @@ class ToDolist extends Component {
                             </div>
                             <div className="sidebar-add-button">
                                 <div className="col-xs-12 col-lg-12" style={{"marginTop":"-30px"}}>
-                                    <div className="col-xs-2 col-sm-1 col-md-2 col-lg-2">
+                                    <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                                     <a style={{"textDecoration": "none"}} onClick={ () => this.toggleVisiblity() }><i className = "fa fa-plus-circle" aria-hidden="true" style={{"fontSize" : "24px"}}></i></a>
                                         </div>
-                                    <div className="col-xs-10 col-sm-11 col-md-10 col-lg-10">
+                                    <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                                     <p>Add List</p>
                                     </div>
                                 </div>
@@ -259,7 +271,7 @@ class ToDolist extends Component {
                      
                         
                     </div>
-                    <div className="col-xs-12 col-sm-8 col-md-9 col-lg-9 ">
+                    <div className="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                         <div className="sidebar-todo">
                             <h2 className="text-center" style={{"paddingTop":"20px"}}>{headerlabel}</h2>
                             <hr width="90%" />
@@ -286,6 +298,7 @@ class ToDolist extends Component {
                          
                         </div>
                     </div>
+                </div>
                 </div>
 
             </div>

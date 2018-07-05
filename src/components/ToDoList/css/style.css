@@ -1,3 +1,4 @@
+
 .main-screen{
 	display: table;
 	margin-top: 43px;
@@ -7,9 +8,14 @@
 }
 body,html{
 	width: 100%;
-    height: 100%;	
+    height: 100%;
+    margin: 0;
+padding: 0;	
 }
-
+.ant-input-search:not(.ant-input-search-small) > .ant-input-suffix {
+    right: 25px;
+    position: relative;
+}
 .pads-chat-bg {
 	background: #fff;
 	margin-left: 20px;
@@ -21,20 +27,21 @@ body,html{
 .sidebar-todo{
     background: #fff;
     border-radius: 3px;
+    
     height:550px;
     margin-top: 20px;
 }
 .sidebar-action-todo{
-    padding-top: 20px;
+    padding-top: 0px;
 }
 .react-calendar {
     border:none !important;
     width: 287px !important;
-    margin-top: -50px !important;
+    margin-top: -76px !important;
     padding-left: 17px !important;
 }
 .sidebar-calender{
-    padding-top: 35px;
+    padding-top: 20px;
 }
 .sidebar-todo input {
     margin-bottom: 27px;
@@ -44,16 +51,27 @@ body,html{
     width: 83%;
     position: relative;
 }
-.sidebar-todo .fa-search{
+
+.search{
+    position: relative;
+}
+.search input { text-indent: 30px;}
+
+.search .fa-search{
     position: absolute;
     top: 28px;
     left: 230px;
+    z-index: 1;
 
+}
+.container-header-row{
+    padding: 10px 0;
 }
 
 
 .sidebar-add-button{
-    margin-top: 250px;
+    margin-top: 180px;
+    padding-bottom: 4px;
 }
 .background-img2 {
     background: url('../../Login/images/todo1.jpg');
@@ -61,10 +79,10 @@ body,html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 650px;
-    width: 115%;
+    width: 100%;
     height: 100%;
-    margin-left: -86px;
     background-position: center;
+    /* background-color: red; */
 }
 .main-screen .background-img2 {
 	display: table;
